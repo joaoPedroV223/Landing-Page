@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <style>
+        .botao, .botao-contato {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-family: sans-serif;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .botao {
+            background-color: #eeeeee;
+            color: #333333;
+            border: 1px solid #cccccc;
+        }
+
+        .botao-contato {
+            background-color: #6a1b9a;
+            color: white;
+        }
+
+        .botao:hover {
+            background-color: #dddddd;
+        }
+
+        .botao-contato:hover {
+            background-color: #4a148c;
+        }
+    </style>
+    <style>
     body {
         font-family: Arial, Helvetica, sans-serif; /* Utilizei CSS com Auxilio de IA */
     }
@@ -116,15 +148,12 @@
 </html>
 
 
-       
-        <h1>Vida Profissional</h1>
-        <h2>quer saber mais sobre minha <a href="./Profissional/Profissional.html"> Vida Profissional?</a></h2>
-        <hr>
-        <h1>Construção de Site</h1>
-        <h2>interessado em <a href="./Constução de site/Construçãodesite.html">Construir um site?</a></h2>
-<hr>
-<h1><a href="./Curriculo/curriculo.html">Curriculo</a></h1>
-<h2>Esta Interessado Entrar em <a href="./contato/contato.html">Contato Comigo</a></h2>
+<div class="menu">
+        <a href="#" class="botao">Vida Profissional</a>
+        <a href="#" class="botao">Construir Site</a>
+        <a href="#" class="botao">Currículo</a>
+        <a href="#" class="botao-contato">Contato</a>
+    </div>
 <hr>
 <h3>Assista a um momento histórico:</h3>
 <video width="320" height="240" controls>
