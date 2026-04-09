@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato Pessoal</title>
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">Home</a> | 
+        <a href="../Curriculo/curriculo.html">Currículo</a> | 
+        <a href="../github/Github.html">Github</a>
+    </nav>
+
+  </nav>
+
+    <h1>Fale Conosco</h1>
+    <p>Preencha o formulário para solicitar um serviço:</p>
+
+    <form action="confirmacao.html">
+        <label>Nome Completo:</label><br>
+        <input type="text" name="nome" required placeholder="Escreva o seu Nome"><br><br>
+
+        <label>Telefone:</label><br>
+        <input type="tel" name="telefone" placeholder="Numero de Telefone"><br><br>
+
+        <label>E-mail:</label><br>
+        <input type="email" name="email" required placeholder=" Email Para Contato"><br><br>
+
+        <label>Tipo de Cliente:</label><br>
+        <input type="radio" name="tipo" value="fisica"> Pessoa Física
+        <input type="radio" name="tipo" value="juridica"> Pessoa Jurídica<br><br>
+
+        <label>Melhor horário de contato:</label><br>
+        <select name="horario">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+        </select><br><br>
+
+        <label>Qual serviço deseja?</label><br>
+        <input type="checkbox" name="s1" value="estatica"> Página Estática<br>
+        <input type="checkbox" name="s2" value="dinamica"> Página Dinâmica<br>
+        <input type="checkbox" name="s3" value="avancada"> Super Avançada<br><br>
+
+        <label>Descrição do que deseja contratar:</label><br>
+        <textarea name="descricao" rows="4" cols="30"></textarea><br><br>
+
+
+
+        <button type="submit"><a href="../confirmaçãodados/confirmação.html">Confirmar Proposta</a></button>
+<br>
+    <br>
+   <a href="../index.html"><img src="../imagens/voltar mesmo.webp" width="50px"> </a>
+
+</body>
+</html>
