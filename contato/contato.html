@@ -1,58 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Contato Pessoal</title>
+    <title>Contato - Simples</title>
+    <style>
+  
+        body { font-family: Arial; margin: 20px; line-height: 1.5; }
+        .campo { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; }
+        input[type="text"], input[type="email"], select, textarea { width: 300px; padding: 5px; }
+        
+
+        .btn-confirmar { 
+            background-color: #1c9b11; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
     <nav>
-        <a href="../index.html">Home</a> | 
-        <a href="../Curriculo/curriculo.html">Currículo</a> | 
-        <a href="../github/Github.html">Github</a>
+        <a href="../index.html">Inicio</a> | <a href="../Curriculo/curriculo.html">Currículo</a> | <a href="../github/Github.html">Github</a>
     </nav>
 
-  </nav>
-
     <h1>Fale Conosco</h1>
-    <p>Preencha o formulário para solicitar um serviço:</p>
 
     <form action="confirmacao.html">
-        <label>Nome Completo:</label><br>
-        <input type="text" name="nome" required placeholder="Escreva o seu Nome"><br><br>
+        
+        <div class="campo">
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" required>
+        </div>
 
-        <label>Telefone:</label><br>
-        <input type="tel" name="telefone" placeholder="Numero de Telefone"><br><br>
+        <div class="campo">
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+        </div>
 
-        <label>E-mail:</label><br>
-        <input type="email" name="email" required placeholder=" Email Para Contato"><br><br>
+        <div class="campo">
+            <label>Tipo de Cliente:</label>
+            <input type="radio" name="tipo" value="PF"> Pessoa Física
+            <input type="radio" name="tipo" value="PJ"> Pessoa Jurídica
+        </div>
 
-        <label>Tipo de Cliente:</label><br>
-        <input type="radio" name="tipo" value="fisica"> Pessoa Física
-        <input type="radio" name="tipo" value="juridica"> Pessoa Jurídica<br><br>
+        <div class="campo">
+            <label>Melhor horário:</label>
+            <select name="horario">
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
+        </div>
 
-        <label>Melhor horário de contato:</label><br>
-        <select name="horario">
-            <option value="manha">Manhã</option>
-            <option value="tarde">Tarde</option>
-            <option value="noite">Noite</option>
-        </select><br><br>
+        <div class="campo">
+            <label>Serviço desejado:</label>
+            <input type="checkbox" name="s1"> Estática 
+            <input type="checkbox" name="s2"> Dinâmica 
+            <input type="checkbox" name="s3"> Avançada
+        </div>
 
-        <label>Qual serviço deseja?</label><br>
-        <input type="checkbox" name="s1" value="estatica"> Página Estática<br>
-        <input type="checkbox" name="s2" value="dinamica"> Página Dinâmica<br>
-        <input type="checkbox" name="s3" value="avancada"> Super Avançada<br><br>
+        <div class="campo">
+            <label>Descrição:</label>
+            <textarea name="desc" rows="3" placeholder="De uma Pequena descrição"></textarea>
+        </div>
 
-        <label>Descrição do que deseja contratar:</label><br>
-        <textarea name="descricao" rows="4" cols="30"></textarea><br><br>
+        <input type="submit" value="Confirmar Proposta" class="btn-confirmar">
 
+    </form>
 
-
-        <button type="submit"><a href="../confirmaçãodados/confirmação.html">Confirmar Proposta</a></button>
-<br>
     <br>
-   <a href="../index.html"><img src="../imagens/voltar mesmo.webp" width="50px"> </a>
+    <a href="index.html">Voltar para Home</a>
 
 </body>
 </html>

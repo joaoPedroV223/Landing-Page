@@ -1,85 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Serviços - Construção de Sites</title>
+    <title>Serviços de Desenvolvimento</title>
     <style>
-        /* Confesso que tive que utilizar IA para o css Porem foi feito por mim, recebendo instruçoes da IA */
+        
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            margin: 20px;
         }
-
-        h1, h2 {
-            color: #004b8d;
-            border-bottom: 2px solid #004b8d;
-            padding-bottom: 5px;
-        }
-
-
-        input, textarea {
+        table {
             width: 100%;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
-
-        button {
-            background-color: #0baa20;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        th, td {
+            border: 1px solid #000;
+            text-align: left;
         }
-
-        button:hover {
-            background-color: #66300c;
+        th {
+            background-color: #f2f2f2; 
+        }
+        .botao-voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h1>Serviços de Construção de Site</h1>
-    <p>Posso produzir sites para diversos segmentos:</p>
-    <ul>
-        <li>Restaurantes</li>
-        <li>Academias</li>
-        <li>Livrarias e Cafeterias</li>
-        <li>Escolinhas de futebol e vôlei</li>
-    </ul>
+    <a href="../index.html" class="botao-voltar">← Voltar para Home</a>
+
+    <h1>Serviços de Desenvolvimento de HomePage</h1>
+    <p>Ofereço soluções personalizadas para a sua presença digital. Confira abaixo nossa tabela de preços e categorias:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Serviço</th>
+                <th>Descrição</th>
+                <th>Preço Estimado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Página Estática</strong></td>
+                <td>Desenvolvimento profissional utilizando apenas HTML5 e CSS3. Ideal para sites institucionais simples.</td>
+                <td>R$ 300,00</td>
+            </tr>
+            <tr>
+                <td><strong>Página Dinâmica</strong></td>
+                <td>Site com interatividade, formulários avançados e elementos que reagem ao usuário.</td>
+                <td>R$ 600,00</td>
+            </tr>
+            <tr>
+                <td><strong>Página Super Avançada</strong></td>
+                <td>Projetos complexos com integração de banco de dados, sistemas de login ou e-commerce.</td>
+                <td>Sob Consulta</td>
+            </tr>
+        </tbody>
+    </table>
 
     <hr>
-
-    <h2>Valores para Sites Estáticos</h2>
-    <ul>
-        <li><strong>1 a 2 páginas:</strong> R$ 300,00</li>
-        <li><strong>3 a 5 páginas:</strong> R$ 600,00</li>
-        <li><strong>Mais de 5 páginas:</strong> A combinar</li>
-    </ul>
-    <p><i>Também trabalho com páginas dinâmicas e avançadas sob consulta.</i></p>
-
-    <hr>
-
-    <h2>Enviar Proposta</h2>
-    <form>
-        <label>Nome:</label><br>
-        <input type="text" placeholder="Digite o seu Nome">
-
-        <label>E-mail:</label><br>
-        <input type="email" placeholder="Digite o seu E-mail">
-
-        <label>Sua demanda:</label><br>
-        <textarea rows="4" placeholder="Descreva o seu Objetivo"></textarea>
-
-        <button type="submit"><a href="../confirmaçãodados/confirmação.html">Confirmar Proposta</a></button>
-    
-    </form>
+    <p><em>Ficou interessado? Entre em contato pela nossa página de <a href="../contato/contato.html">Contato</a> para um orçamento detalhado.</em></p>
 
 </body>
 </html>
