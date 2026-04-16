@@ -3,189 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>João Pedro Varejão - Landing Page</title>
     <style>
-       body {
-    background-color: #000000; 
-    color: #ffffff;           
-    margin: 0;                
-    font-family: sans-serif;  
-}
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-      .botao, .botao-contato {
-            display: block;
-            width: 200px;
-            margin: 10px auto;
+        body {
+            background-color: #0a0a0a; 
+            color: #e0e0e0;            
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            border: 4px solid #0056b3; 
+            box-shadow: 0 0 20px rgba(0, 86, 179, 0.4);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            margin-top: 30px;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; display: inline-block; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #161616;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
             padding: 15px;
+            border: 1px solid #222;
+        }
+
+        th { background-color: #002d5c; color: #ffffff; }
+
+        a { color: #4da6ff; text-decoration: none; transition: 0.3s; }
+        a:hover { color: #ffffff; text-decoration: underline; }
+
+        .img-turismo {
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        .img-turismo:hover { transform: scale(1.05); }
+
+        .menu {
+            margin: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .botao, .botao-contato, .botao-github {
+            display: inline-block;
+            width: 180px;
+            padding: 12px;
             text-align: center;
             text-decoration: none;
-            font-family: sans-serif;
-            border-radius: 5px;
+            border-radius: 30px; 
             font-weight: bold;
+            transition: all 0.3s ease;
         }
 
         .botao {
-            background-color: #eeeeee;
-            color: #333333;
-            border: 1px solid #cccccc;
+            background-color: #ffffff;
+            color: #121212;
+        }
+
+        .botao-github {
+            background-color: #24292e;
+            color: #ffffff;
+            border: 1px solid #4da6ff;
         }
 
         .botao-contato {
-            background-color: #eeeeee;
-            color: #333333;
-            border: 1px solid #cccccc;
+            background-color: #0056b3; 
+            color: #ffffff;
         }
 
-        .botao:hover {
-            background-color: #dddddd;
+        .botao:hover, .botao-contato:hover, .botao-github:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(77, 166, 255, 0.3);
+            filter: brightness(1.2);
         }
 
-        .botao-contato:hover {
-            background-color: #dddddd;
+        video, audio, iframe {
+            border-radius: 12px;
+            max-width: 100%;
+            margin-top: 15px;
+            border: none;
         }
+
+        hr { width: 100%; border: 0; border-top: 1px solid #222; margin: 40px 0; }
+
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; }
     </style>
-    <style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-</style>
 </head>
-<center>
 <body>
-<img src="./imagens/WhatsApp Image 2026-04-07 at 18.14.59.jpeg" width="200x">
-        <h1>João Pedro Varejão Da Silva</h1>
-        <p>Estudante de Sistemas de Informação na Universidade de Vila Velha</p>
-    </div>
 
+<div class="container">
+    <img src="./imagens/WhatsApp Image 2026-04-07 at 18.14.59.jpeg" width="200" height="200" class="profile-img">
+    <h1>João Pedro Varejão Da Silva</h1>
+    <p style="font-size: 1.2rem; color: #bbb;">Estudante de Sistemas de Informação na Universidade de Vila Velha</p>
 
-        <h2>Sobre Mim & Objetivos</h2>
-        <p>Flamenguista desde criança, moro Em Nova itaparica meu sonho é viver fazendo aquilo que gosto, programar, e um dia viver fora do País</p>
+    <hr>
 
+    <h2>Sobre Mim & Objetivos</h2>
+    <p>Flamenguista desde criança, moro em Nova Itaparica. Meu sonho é viver fazendo aquilo que gosto: <strong>programar</strong>, e um dia viver fora do País.</p>
 
+    <h2>Habilidades</h2>
+    <ul>
+        <li>💻 <strong>Computacionais:</strong> HTML básico, Excel, PowerPoint, Word Intermediário.</li>
+        <li>🤝 <strong>Profissionais:</strong> Trabalho em equipe, proatividade, facilidade em aprender.</li>
+        <li>🏍️ <strong>Hobbies:</strong> Flamengo, ouvir música e viajar de moto.</li>
+    </ul>
 
-        <h2>Habilidades</h2>
-        <ul>
-            <li><strong>Habilidades Computacionais:</strong> HTML básico,Excel, PowerPoint,Word Intermediario.</li>
-            <li><strong>Habilidades Profissionais:</strong> Trabalho em equipe, proatividade Facilidade em Aprender.</li>
-            <li><strong>Hobbies:</strong> Flamenguista, Ouvir Musica e viajar de moto &#127949;.</li>
-        </ul>
+    <hr>
 
-
-
-        <h2>Vida Acadêmica</h2>
-        <table border="1">
+    <h2>Vida Acadêmica</h2>
+    <table>
+        <thead>
             <tr>
                 <th>Nível</th>
                 <th>Instituição</th>
                 <th>Status</th>
             </tr>
-            <tr>
-                <td>Ensino Médio</td>
-                <td><a href="https://qedu.org.br/escola/32038496-eeefm-francelina-carneiro-setubal">EEEFM Francelina Carneiro Setubal</a></td>
-                <td><strong>Concluído</strong></td>
-            </tr>
-           
-            </tr>
-             <tr>
-                <td>Curso</td>
-                <td><a href="https://cnpj.biz/43860883000112">Visual PontoCom</a></td>
-               <td><strong>Concluído</strong></td>
-            </tr>
-             <tr>
-                <td>Curso</td>
-                <td><a href="https://www.yes.com.br/">YES!</a></td>
-                <td><strong>Concluído</strong></td>
-                 <tr>
-                <td>Graduação</td>
-                <td><a href="https://uvv.br/">Universidade de Vila Velha</a></td>
-                <td><strong>Em andamento (1º Período)</strong></td>
-            </tr>
-        </table>
-
-
-
-        <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Minha Página - Vila Velha</title>
-</head>
-<body>
-
-    <h2>Fotos de Vila Velha</h2>
-    <p>Confira alguns pontos turísticos da cidade onde estudo/moro:</p>
-    
-    <table border="1" cellpadding="10">
+        </thead>
         <tbody>
             <tr>
-                <td align="center">
-                    <img src="./imagens/convento da penha.webp" alt="Convento da Penha" width="200"><br>
+                <td>Ensino Médio</td>
+                <td><a href="https://qedu.org.br/escola/32038496-eeefm-francelina-carneiro-setubal" target="_blank">EEEFM Francelina Carneiro Setubal</a></td>
+                <td><strong>Concluído</strong></td>
+            </tr>
+            <tr>
+                <td>Curso</td>
+                <td><a href="https://cnpj.biz/43860883000112" target="_blank">Visual PontoCom</a></td>
+                <td><strong>Concluído</strong></td>
+            </tr>
+            <tr>
+                <td>Curso</td>
+                <td><a href="https://www.yes.com.br/" target="_blank">YES!</a></td>
+                <td><strong>Concluído</strong></td>
+            </tr>
+            <tr>
+                <td>Graduação</td>
+                <td><a href="https://uvv.br/" target="_blank">Universidade de Vila Velha</a></td>
+                <td><strong>Em andamento</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Fotos de Vila Velha</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="./imagens/convento da penha.webp" alt="Convento da Penha" width="200" class="img-turismo"><br>
                     <strong>Convento da Penha</strong><br>
-                    O maior ponto turístico do Espírito Santo, no topo de um morro.
+                    O maior ponto turístico do ES.
                 </td>
-                
-                <td align="center">
-                    <img src="./imagens/praia de itaparica.webp" alt="Praia de Itaparica" width="200"><br>
+                <td>
+                    <img src="./imagens/praia de itaparica.webp" alt="Praia de Itaparica" width="200" class="img-turismo"><br>
                     <strong>Praia de Itaparica</strong><br>
-                    Uma das praias mais frequentadas, ótima para passeios.
+                    Ótima para passeios.
                 </td>
             </tr>
-            
             <tr>
-                <td align="center">
-                    <img src="./imagens/farol de santa luzia.webp" alt="Farol de Santa Luzia" width="200"><br>
+                <td>
+                    <img src="./imagens/farol de santa luzia.webp" alt="Farol de Santa Luzia" width="200" class="img-turismo"><br>
                     <strong>Farol de Santa Luzia</strong><br>
-                    Um local histórico com vista panorâmica para o oceano.
+                    Local histórico e vista linda.
                 </td>
-                
-                <td align="center">
-                    <img src="./imagens/fabrica garoto.webp" alt="Fábrica da Garoto" width="200"><br>
+                <td>
+                    <img src="./imagens/fabrica garoto.webp" alt="Fábrica da Garoto" width="200" class="img-turismo"><br>
                     <strong>Fábrica da Garoto</strong><br>
-                    Famosa fábrica de chocolates da região.
+                    A famosa fábrica de chocolates.
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <h3>Vídeo: Conheça Vila Velha - ES</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hLrNckEmcAc" title="YouTube video player"></iframe>
+
     <hr>
-<h3>Vídeo: Conheça Vila Velha - ES</h3>
-<p>Assista abaixo um pouco mais sobre as belezas da nossa cidade:</p>
 
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/hLrNckEmcAc" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-</iframe>
-
-<hr>
-
-</body>
-</html>
-
-
-       
-<div class="menu">
+    <h2>Navegação</h2>
+    <div class="menu">
         <a href="./Profissional/Profissional.html" class="botao">Vida Profissional</a>
         <a href="./Constução de site/Construçãodesite.html" class="botao">Construir Site</a>
         <a href="./Curriculo/curriculo.html" class="botao">Currículo</a>
+        <a href="../github/Github.html" class="botao-github">GitHub</a>
         <a href="./contato/contato.html" class="botao-contato">Contato</a>
     </div>
-<hr>
-<h3>Assista a um momento histórico:</h3>
-<video width="320" height="240" controls>
-    <source src="./Video/Gol_do_Glorioso.mp4" type="video/mp4">
-    Seu navegador não suporta o formato de vídeo.
-</video>
-<h3>Hino do Meu Time do Coração:</h3>
-<audio controls>
-  <source src="./Audio/HINO DO FLAMENGO.mp3" type="audio/mpeg">
-  Seu navegador não suporta o formato de áudio.
-</audio>
+
+    <hr>
+
+    <h3>Assista a um momento histórico:</h3>
+    <video width="320" height="240" controls>
+        <source src="./Video/Gol_do_Glorioso.mp4" type="video/mp4">
+    </video>
+
+    <h3>Hino do Meu Time do Coração:</h3>
+    <audio controls>
+        <source src="./Audio/HINO DO FLAMENGO.mp3" type="audio/mpeg">
+    </audio>
+</div>
 
 </body>
 </html>

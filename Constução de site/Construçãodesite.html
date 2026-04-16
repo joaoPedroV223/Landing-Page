@@ -1,73 +1,244 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Serviços de Desenvolvimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Desenvolvimento - João Pedro</title>
     <style>
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+        /* Variáveis para facilitar a manutenção das cores */
+        :root {
+            --bg-principal: #0d1117;
+            --bg-card: #161b22;
+            --azul-destaque: #58a6ff;
+            --azul-escuro: #003366;
+            --texto-claro: #c9d1d9;
+            --borda: #30363d;
         }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-claro);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Menu mais elegante */
+        header {
+            background-color: rgba(22, 27, 34, 0.95);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--borda);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--texto-claro);
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--azul-destaque);
+        }
+
+        .container {
+            max-width: 850px;
+            width: 90%;
+            margin: 50px auto;
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 24px; /* Cantos bem arredondados para um ar mais moderno */
+            border: 1px solid var(--borda);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #8b949e;
+            margin-bottom: 40px;
+        }
+
+        /* Tabela "Humanizada" */
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--borda);
+        }
+
+        th {
+            background-color: #21262d;
+            color: var(--azul-destaque);
+            padding: 16px;
+            text-align: left;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--borda);
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--borda);
+            background-color: var(--bg-card);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #1f242c; /* Efeito de destaque ao passar o mouse */
+        }
+
+        .preco {
+            color: #3fb950; /* Verde para passar sensação de valor/sucesso */
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Badges estilizados */
+        .info-extras {
+            margin-top: 40px;
+            padding: 25px;
+            background: rgba(88, 166, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background: var(--azul-escuro);
+            color: var(--azul-destaque);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            border: 1px solid var(--azul-destaque);
+            font-weight: 600;
+        }
+
+        /* Botão estilizado */
+        .btn-contato {
+            display: inline-block;
+            background: var(--azul-destaque);
+            color: #0d1117;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease, filter 0.2s ease;
             margin-top: 20px;
         }
-        th, td {
-            border: 1px solid #000;
-            text-align: left;
+
+        .btn-contato:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
         }
-        th {
-            background-color: #f2f2f2; 
-        }
-        .botao-voltar {
-            display: inline-block;
-            margin-bottom: 20px;
+
+        .link-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #8b949e;
             text-decoration: none;
-            color: blue;
-            font-weight: bold;
+            font-size: 0.85rem;
         }
+
+        .link-voltar:hover { color: var(--texto-claro); }
+
     </style>
 </head>
 <body>
 
-    <a href="../index.html" class="botao-voltar">← Voltar para Home</a>
+    <header>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="../Curriculo/curriculo.html">Currículo</a>
+            <a href="../github/Github.html">GitHub</a>
+            <a href="../contato/contato.html">Contato</a>
+        </nav>
+    </header>
 
-    <h1>Serviços de Desenvolvimento de HomePage</h1>
-    <p>Ofereço soluções personalizadas para a sua presença digital. Confira abaixo nossa tabela de preços e categorias:</p>
+    <div class="container">
+        <h1>Serviços & Soluções</h1>
+        <p class="subtitulo">Desenvolvimento focado em qualidade e experiência do usuário.</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Tipo de Serviço</th>
-                <th>Descrição</th>
-                <th>Preço Estimado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Página Estática</strong></td>
-                <td>Desenvolvimento profissional utilizando apenas HTML5 e CSS3. Ideal para sites institucionais simples.</td>
-                <td>R$ 300,00</td>
-            </tr>
-            <tr>
-                <td><strong>Página Dinâmica</strong></td>
-                <td>Site com interatividade, formulários avançados e elementos que reagem ao usuário.</td>
-                <td>R$ 600,00</td>
-            </tr>
-            <tr>
-                <td><strong>Página Super Avançada</strong></td>
-                <td>Projetos complexos com integração de banco de dados, sistemas de login ou e-commerce.</td>
-                <td>Sob Consulta</td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria de Projeto</th>
+                    <th>Volume</th>
+                    <th>Investimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Estático Essencial</strong><br><small>HTML5 e CSS3 puro.</small></td>
+                    <td>1 a 2 págs</td>
+                    <td class="preco">R$ 300,00</td>
+                </tr>
+                <tr>
+                    <td><strong>Estático Negócio</strong><br><small>Ideal para empresas locais.</small></td>
+                    <td>3 a 5 págs</td>
+                    <td class="preco">R$ 600,00</td>
+                </tr>
+                <tr>
+                    <td><strong>Estático Corporativo</strong><br><small>Presença web completa.</small></td>
+                    <td>5+ págs</td>
+                    <td class="preco">R$ 900,00</td>
+                </tr>
+                <tr>
+                    <td><strong>Dinâmico Interativo</strong><br><small>Com animações e formulários.</small></td>
+                    <td>-</td>
+                    <td class="preco">R$ 1.200,00+</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <hr>
-    <p><em>Ficou interessado? Entre em contato pela nossa página de <a href="../contato/contato.html">Contato</a> para um orçamento detalhado.</em></p>
+        <div class="info-extras">
+            <h3 style="margin-top: 0; color: #fff;">Segmentos atendidos:</h3>
+            <div class="badge-container">
+                <span class="badge">Restaurantes</span>
+                <span class="badge">Academias</span>
+                <span class="badge">Livrarias</span>
+                <span class="badge">Cafeterias</span>
+                <span class="badge">Escolas</span>
+                <span class="badge">Esportes</span>
+            </div>
+            <p style="margin-bottom: 0; font-size: 0.85rem; color: #8b949e; margin-top: 20px;">
+                * Projetos incluem captura de dados e interface responsiva para celulares.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <p>Pronto para começar seu projeto?</p>
+            <a href="../contato/contato.html" class="btn-contato">Solicitar Orçamento Agora</a>
+        </div>
+
+        <a href="../index.html" class="link-voltar">← Voltar para a Página Inicial</a>
+    </div>
 
 </body>
 </html>

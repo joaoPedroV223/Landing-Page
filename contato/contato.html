@@ -2,87 +2,142 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Contato - Simples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato e Orçamento - João Pedro</title>
     <style>
-        .botao-confirmar {
-    display: inline-block;
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-  
-        body { font-family: Arial; margin: 20px; line-height: 1.5; }
-        .campo { margin-bottom: 15px; }
-        label { font-weight: bold; display: block; }
-        input[type="text"], input[type="email"], select, textarea { width: 300px; padding: 5px; }
-        
-
-        .btn-confirmar { 
-            background-color: #1c9b11; 
-            color: white; 
-            padding: 10px 20px; 
-            border: none; 
-            cursor: pointer;
-            font-weight: bold;
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+
+        .form-container {
+            background-color: #161616;
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 550px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            border-top: 4px solid #0056b3;
+            margin: 20px;
+        }
+
+        h1 { color: #fff; text-align: center; margin-bottom: 30px; }
+
+        .campo-grupo { margin-bottom: 18px; }
+
+        label { display: block; margin-bottom: 8px; color: #4da6ff; font-weight: 600; }
+
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #222;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .opcoes-inline {
+            display: flex;
+            gap: 15px;
+            background: #111;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .botao-enviar {
+            background: linear-gradient(135deg, #0056b3, #00a2ff);
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .botao-enviar:hover {
+            transform: scale(1.02);
+            filter: brightness(1.2);
+            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.4);
+        }
+
+        .link-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .link-voltar:hover { color: #fff; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="../index.html">Inicio</a> | <a href="../Curriculo/curriculo.html">Currículo</a> | <a href="../github/Github.html">Github</a>
-    </nav>
-
-    <h1>Fale Conosco</h1>
-
-    <form action="confirmacao.html">
+<div class="form-container">
+    <h1>Solicitar Proposta</h1>
+    
+    <form action="../confirmaçãodados/confirmação.html" method="GET">
         
-        <div class="campo">
-            <label>Nome Completo:</label>
-            <input type="text" name="nome" required>
+        <div class="campo-grupo">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" required>
         </div>
 
-        <div class="campo">
-            <label>E-mail:</label>
-            <input type="email" name="email" required>
+        <div class="campo-grupo">
+            <label for="contato">Telefone / WhatsApp</label>
+            <input type="tel" id="contato" name="telefone" placeholder="(27) 99999-9999">
         </div>
 
-        <div class="campo">
-            <label>Tipo de Cliente:</label>
-            <input type="radio" name="tipo" value="PF"> Pessoa Física
-            <input type="radio" name="tipo" value="PJ"> Pessoa Jurídica
+        <div class="campo-grupo">
+            <label>Tipo de Contratante</label>
+            <div class="opcoes-inline">
+                <label style="color:#ccc; font-weight: normal;"><input type="radio" name="perfil" value="PF"> Pessoa Física</label>
+                <label style="color:#ccc; font-weight: normal;"><input type="radio" name="perfil" value="PJ"> Pessoa Jurídica</label>
+            </div>
         </div>
 
-        <div class="campo">
-            <label>Melhor horário:</label>
-            <select name="horario">
-                <option>Manhã</option>
-                <option>Tarde</option>
-                <option>Noite</option>
+        <div class="campo-grupo">
+            <label for="horario">Melhor Horário para Retorno</label>
+            <select id="horario" name="horario">
+                <option value="manha">Manhã (08h às 12h)</option>
+                <option value="tarde">Tarde (13h às 18h)</option>
+                <option value="noite">Noite (Pós 19h)</option>
             </select>
         </div>
 
-        <div class="campo">
-            <label>Serviço desejado:</label>
-            <input type="checkbox" name="s1"> Estática 
-            <input type="checkbox" name="s2"> Dinâmica 
-            <input type="checkbox" name="s3"> Avançada
+        <div class="campo-grupo">
+            <label>Serviços de Interesse</label>
+            <div class="opcoes-inline" style="flex-wrap: wrap;">
+                <label style="color:#ccc; font-weight: normal;"><input type="checkbox" name="servico" value="lp"> Landing Page</label>
+                <label style="color:#ccc; font-weight: normal;"><input type="checkbox" name="servico" value="institucional"> Site Institucional</label>
+                <label style="color:#ccc; font-weight: normal;"><input type="checkbox" name="servico" value="ecom"> E-commerce</label>
+            </div>
         </div>
 
-        <div class="campo">
-            <label>Descrição:</label>
-            <textarea name="desc" rows="3" placeholder="De uma Pequena descrição"></textarea>
+        <div class="campo-grupo">
+            <label for="mensagem">Descrição do Projeto</label>
+            <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte um pouco sobre sua ideia..."></textarea>
         </div>
 
-<a href="../confirmaçãodados/confirmação" class="botao-confirmar">Confirmar Proposta</a>
-
+        <button type="submit" class="botao-enviar">Enviar Demanda</button>
     </form>
 
-    <br>
-    <a href="../index.html">Voltar para Home</a>
+    <a href="../index.html" class="link-voltar">← Voltar para a Home</a>
+</div>
 
 </body>
 </html>

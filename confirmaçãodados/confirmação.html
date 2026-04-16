@@ -2,29 +2,102 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Confirmação de Envio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Envio - João Pedro</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .confirm-container {
+            background-color: #161616;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            border-bottom: 4px solid #28a745; /* Verde para sucesso */
+        }
+
+        h1 { color: #fff; margin-top: 20px; }
+
+        .icon-success {
+            border-radius: 12px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .icon-success:hover { transform: scale(1.1); }
+
+        .passos-box {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin: 25px 0;
+            border: 1px solid #222;
+        }
+
+        h4 { color: #4da6ff; margin-top: 0; }
+
+        ul { padding-left: 20px; }
+
+        li { margin-bottom: 10px; color: #bbb; }
+
+        .botao-voltar {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .botao-voltar:hover {
+            background-color: #4da6ff;
+            box-shadow: 0 5px 15px rgba(77, 166, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        hr { border: 0; border-top: 1px solid #222; margin: 20px 0; }
+    </style>
 </head>
 <body>
-<img src="" alt="">
-    <center>
-        <h1>✅ Dados Enviados!</h1>
-        <p>Sua solicitação de orçamento foi processada.</p>
-    </center>
-<center>
-<img src="../imagens/correto.webp" width="200px">
-</center>
-    <h4>Próximos passos:</h4>
-    <ul>
-        <li>Verifique sua caixa de entrada.</li>
-        <li>Aguarde o contato.</li>
-    </ul>
+
+<div class="confirm-container">
+    <img src="../imagens/correto.webp" width="120" class="icon-success" alt="Sucesso">
+    
+    <h1>✅ Dados Enviados!</h1>
+    <p>Sua solicitação de orçamento foi processada com sucesso.</p>
+
+    <div class="passos-box">
+        <h4>Próximos passos:</h4>
+        <ul>
+            <li>Verifique sua caixa de entrada (E-mail).</li>
+            <li>Fique atento ao seu WhatsApp para nosso contato.</li>
+    
+        </ul>
+    </div>
 
     <hr>
 
-    <p>Clique abaixo para retornar ao início:</p>
-    <a href="../index.html">
-        <button type="button">Voltar para a Página Inicial</button>
-    </a>
+    <p style="font-size: 0.9rem; color: #888;">Clique abaixo para retornar ao início:</p>
+    
+    <a href="../index.html" class="botao-voltar">Voltar para a Home</a>
+</div>
 
 </body>
 </html>

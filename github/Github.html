@@ -2,26 +2,122 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Meu Github</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github - João Pedro</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 60px auto;
+            text-align: center;
+            background-color: #161616;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #002d5c;
+            border-radius: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4da6ff;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        h1 {
+            color: #ffffff;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-logo {
+            filter: drop-shadow(0 0 10px rgba(77, 166, 255, 0.5));
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .github-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-github {
+            display: inline-block;
+            background-color: #24292e;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            border: 1px solid #4da6ff;
+            margin: 20px 0;
+            transition: 0.3s;
+        }
+
+        .btn-github:hover {
+            background-color: #4da6ff;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(77, 166, 255, 0.4);
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 20px;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-voltar:hover {
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
+
+<div class="container">
     <nav>
-        <a href="../index.html">Início</a> | 
-        <a href="../Curriculo/curriculo.html">Currículo</a> | 
+        <a href="../index.html">Início</a>
+        <a href="../Curriculo/curriculo.html">Currículo</a>
         <a href="../contato/contato.html">Contato</a>
     </nav>
 
     <h1>Meu Portfólio no Github</h1>
     
-    <p>Confira meu repositório e projetos de construção de páginas:</p>
+    <p>Confira meu repositório oficial e acompanhe a evolução dos meus projetos de desenvolvimento:</p>
 
-    <img src="../imagens/github.webp" alt="Logo Github" width="100">
+    <img src="../imagens/github.webp" alt="Logo Github" width="120" class="github-logo">
     
-    <br><br>
+    <br>
 
-    <a href="https://github.com/joaoPedroV223/Landing-Page.git" target="_blank">Clique aqui para acessar meu Github</a>
+    <a href="https://github.com/joaoPedroV223/Landing-Page.git" target="_blank" class="btn-github">Acessar meu Github</a>
 
-    <br><br>
-    <a href="../index.html">Voltar para Home</a>
+    <br>
+    <a href="../index.html" class="btn-voltar">← Voltar para Home</a>
+</div>
+
 </body>
 </html>
